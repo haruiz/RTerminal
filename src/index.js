@@ -3,59 +3,8 @@ import './styles.module.css'
 import {Menu, Item, Submenu, MenuProvider} from 'react-contexify';
 import 'react-contexify/dist/ReactContexify.min.css';
 import shortId from "shortid";
-import TextareaAutosize from 'react-autosize-textarea';
+import TerminalLine from "./TerminalLine";
 
-class TerminalLine extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      text: "",
-      textOut: "",
-      textOutColor: "white",
-      readOnly: false
-    }
-  }
-
-  keyPressEvent = (evt) => {
-    const {enterKeyPress} = this.props
-    const {text} = this.state
-    if (evt.key === 'Enter' && text) {
-      enterKeyPress(text)
-      this.setState({readOnly: true})
-    }
-  }
-  textInputValueChangedEvent = (event) => {
-    this.setState({text: event.target.value});
-  }
-  textAreaValueChangedEvent = (event) => {
-    this.setState({textOut: event.target.text});
-  }
-  print = (text, color = "white") => {
-    this.setState({textOut: text, textOutColor: color})
-  }
-
-  render() {
-    const {text, textOut, textOutColor, readOnly} = this.state
-    const {pwd} = this.props
-    return (
-      <React.Fragment>
-        <div className="term_line_container">
-          <label className="term_line_txt_pwd">{pwd}></label>
-          <input className="term_line_txt_cmd" type="text" readOnly={readOnly} value={text}
-                 onChange={this.textInputValueChangedEvent} autoFocus={true} onKeyPress={this.keyPressEvent}/>
-        </div>
-        {textOut &&
-        <TextareaAutosize readOnly={readOnly} className="term_line_txt_output" ref={this.textarea} value={textOut}
-                          wrap="off" style={{color: textOutColor}}/>}
-      </React.Fragment>
-    );
-  }
-}
-
-TerminalLine.defaultProps = {
-  text_out_color: "red",
-  pwd: null
-}
 
 class Terminal extends React.Component {
   constructor(props) {
