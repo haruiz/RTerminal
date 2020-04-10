@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -11,4 +11,120 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input, textarea, input:focus, textarea:focus, select:focus{
+  outline: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  border: transparent solid 0;
+  color: white;
+}
+
+div.term_line_container{
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+textarea.term_line_txt_output{
+  resize: none;
+  width:100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: 'Droid Sans','Consolas', 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+label.term_line_txt_pwd{
+  color: whitesmoke;
+  margin: 5px;
+  font-size: 14px;
+  font-family: 'Droid Sans', 'Consolas', 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+
+input.term_line_txt_cmd{
+  flex: 1;
+  margin: 5px;
+  font-size: 14px;
+  font-family: 'Droid Sans','Consolas', 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+
+
+/*Themes*/
+
+.cmd-terminal{
+  background-color: black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  overflow-y:auto;
+  overflow-x:hidden;
+  white-space:nowrap;
+}
+.cmd-terminal > div > nav{
+  cursor: pointer;
+  border: 1px solid black;
+  height: 30px;
+  background-color: white;
+  vertical-align: center;
+}
+
+.powershell-terminal{
+  background-color: #012456;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  overflow-y:auto;
+  overflow-x:hidden;
+  white-space:nowrap;
+}
+
+.powershell-terminal > div > nav{
+  cursor: pointer;
+  border: 1px solid black;
+  height: 30px;
+  background-color: white;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.ubuntu-terminal{
+  background-color: #2C0922;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  overflow-y:auto;
+  overflow-x:hidden;
+  white-space:nowrap;
+}
+
+.ubuntu-terminal > div > nav{
+  cursor: pointer;
+  height: 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #464540;
+
+}
+
+
+.mac-terminal{
+  background-color: black;
+  border: gray solid 1px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  overflow-y:auto;
+  overflow-x:hidden;
+  white-space:nowrap;
+}
+
+.mac-terminal > div > nav{
+  cursor: pointer;
+  height: 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #D2D2D2;
 }

@@ -24,7 +24,10 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0",
+    "react-autosize-textarea": "^7.0.0",
+    "react-contexify": "^4.1.1",
+    "shortid": "^2.2.15"
   },
   "devDependencies": {
     "microbundle-crl": "^0.13.8",
@@ -49,5 +52,10 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "react-autosize-textarea": "^7.0.0",
+    "react-contexify": "^4.1.1",
+    "shortid": "^2.2.15"
+  }
 }

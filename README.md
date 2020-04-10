@@ -9,8 +9,9 @@
 ```bash
 npm install --save rterminal
 ```
-
 ## Usage
+
+![](rterminal.gif)
 
 ```jsx
 import React from 'react';
