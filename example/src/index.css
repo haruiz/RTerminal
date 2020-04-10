@@ -58,73 +58,77 @@ input.term_line_txt_cmd{
 
 /*Themes*/
 
-.cmd-terminal{
+div.body-div{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+div.main-div{
+  margin: 10px;
+  max-height: 400px;
+  width: 600px;
+  min-height: 400px;
   background-color: black;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-  overflow-y:auto;
-  overflow-x:hidden;
-  white-space:nowrap;
+  box-sizing: border-box;
+  /*border: 1px solid rgba(0, 0, 0, 0.6);*/
+  /*box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);*/
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  -o-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
 }
-.cmd-terminal > div > nav{
-  cursor: pointer;
-  border: 1px solid black;
-  height: 30px;
+
+div.nav-div{
   background-color: white;
-  vertical-align: center;
-}
-
-.powershell-terminal{
-  background-color: #012456;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-  overflow-y:auto;
-  overflow-x:hidden;
-  white-space:nowrap;
-}
-
-.powershell-terminal > div > nav{
   cursor: pointer;
-  border: 1px solid black;
-  height: 30px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+/*themes*/
+
+div.powershell-nav {
   background-color: white;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  color: black;
 }
 
-.ubuntu-terminal{
-  background-color: #2C0922;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-  overflow-y:auto;
-  overflow-x:hidden;
-  white-space:nowrap;
+div.cmd-nav {
+  background-color: white;
+  color: black;
 }
 
-.ubuntu-terminal > div > nav{
-  cursor: pointer;
-  height: 30px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+div.ubuntu-nav {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   background-color: #464540;
-
+  color: whitesmoke;
 }
 
-
-.mac-terminal{
-  background-color: black;
-  border: gray solid 1px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-  overflow-y:auto;
-  overflow-x:hidden;
-  white-space:nowrap;
-}
-
-.mac-terminal > div > nav{
-  cursor: pointer;
-  height: 30px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+div.mac-nav {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   background-color: #D2D2D2;
+  color: black;
 }
+
+
+div.powershell-main{
+  background-color: #012456;
+}
+div.cmd-main{
+  background-color: black;
+}
+div.ubuntu-main{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #2C0922;
+}
+div.mac-main{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: black;
+}
+

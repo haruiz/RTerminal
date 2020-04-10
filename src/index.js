@@ -81,15 +81,16 @@ class Terminal extends React.Component {
     const {onCommand, ...customs} = this.props
     return (
       <React.Fragment>
-        <main className={`${theme}-terminal`} {...customs}>
-          <MenuProvider id="termContextMenu" style={{width: "100%", display: 'inline-block'}}>
-            <nav>
-            </nav>
-          </MenuProvider>
-          <section>
-            {lines}
-          </section>
-        </main>
+        <MenuProvider id="termContextMenu" style={{width: "100%", display: 'inline-block'}}>
+          <div className={`main-div ${theme}-main`}>
+            <div  className={`nav-div ${theme}-nav`}>
+              Terminal
+            </div>
+            <div className="body-div">
+              {lines}
+            </div>
+          </div>
+        </MenuProvider>
         {this.contextMenu()}
       </React.Fragment>
     )

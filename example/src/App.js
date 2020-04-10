@@ -17,8 +17,21 @@ class App extends React.Component {
     this.terminal.print("Hello world");
   }
   render() {
-    return (<Terminal ref={this.terminalRef} onCommand={this.onCommand}
-                      style={{width: 800, height: 600, minHeight: 500, minWidth: 800}}/>)
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "60%",
+          resize: "both",
+          margin: "0 auto",
+          paddingTop: "10%",
+          overflow: "auto"
+        }}>
+          <Terminal ref={this.terminalRef} onCommand={this.onCommand}  style={{width: 800, height: 600, minHeight: 500, minWidth: 800}}/>
+      </div>
+      )
   }
 
 
