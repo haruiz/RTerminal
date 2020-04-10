@@ -82,7 +82,7 @@ class Terminal extends React.Component {
     return (
       <React.Fragment>
         <MenuProvider id="termContextMenu" style={{width: "100%", display: 'inline-block'}}>
-          <div className={`main-div ${theme}-main`}>
+          <div className={`main-div ${theme}-main`} {...customs}>
             <div  className={`nav-div ${theme}-nav`}>
               Terminal
             </div>
